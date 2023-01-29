@@ -32,8 +32,8 @@ def get_entries_in_proximity_of_entry_condition(
     return len(nearby_entries)
 
 
-def check_value_is_positive(value: int) -> bool:
-    return value > 0
+def check_value_is_ge_one(value: int) -> bool:
+    return value >= 1
 
 
 def get_positive_entries_in_proximity(
@@ -112,50 +112,50 @@ assert (
 # Test bonus solution function
 assert (
     get_entries_in_proximity_of_entry_condition(
-        example_matrix, 1, check_value_is_positive
+        example_matrix, 1, check_value_is_ge_one
     )
     == 7
 ), "Function failed with the example matrix."
 assert (
     get_entries_in_proximity_of_entry_condition(
-        matrix_with_ones, 1, check_value_is_positive
+        matrix_with_ones, 1, check_value_is_ge_one
     )
     == 15
 ), "Function failed with matrix with all positive values."
 assert (
     get_entries_in_proximity_of_entry_condition(
-        matrix_with_ones, 0, check_value_is_positive
+        matrix_with_ones, 0, check_value_is_ge_one
     )
     == 15
 ), """Function failed with matrix with all positive values
     and zero proximity requirement"""
 assert (
     get_entries_in_proximity_of_entry_condition(
-        matrix_with_zeroes, 1, check_value_is_positive
+        matrix_with_zeroes, 1, check_value_is_ge_one
     )
     == 0
 ), "Function failed with matrix with all zero values."
 assert (
     get_entries_in_proximity_of_entry_condition(
-        matrix_with_neg_zeroes, 1, check_value_is_positive
+        matrix_with_neg_zeroes, 1, check_value_is_ge_one
     )
     == 0
 ), "Function failed with matrix with all zero and negative values."
 assert (
     get_entries_in_proximity_of_entry_condition(
-        matrix_with_neg_zeroes_pos, 1, check_value_is_positive
+        matrix_with_neg_zeroes_pos, 1, check_value_is_ge_one
     )
     == 4
 ), "Function failed with matrix with negative, zero, and positive values."
 assert (
     get_entries_in_proximity_of_entry_condition(
-        matrix_with_inf, 1, check_value_is_positive
+        matrix_with_inf, 1, check_value_is_ge_one
     )
     == 4
 ), "Function failed with matrix containing an infinite positive value."
 assert (
     get_entries_in_proximity_of_entry_condition(
-        matrix_with_min_size, 0, check_value_is_positive
+        matrix_with_min_size, 0, check_value_is_ge_one
     )
     == 0
 ), "Function failed with matrix of minimum size."
