@@ -82,8 +82,6 @@ matrix_with_min_size = [[0, 0], [0, 0]]
 
 # Test main solution function
 
-# Test main solution function
-
 assert (
     get_positive_entries_in_proximity(example_matrix, 1) == 7
 ), "Function failed with the example matrix."
