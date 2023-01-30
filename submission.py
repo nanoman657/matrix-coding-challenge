@@ -1,5 +1,5 @@
 def get_entries_in_proximity(
-    row: int, col: int, proximity: int, matrix: list[list]
+    row: int, col: int, proximity: int, matrix: list[list[int | float]]
 ) -> set:
     nearby_entries = set()
     row_range = range(max(0, row - proximity), min(row + proximity + 1, len(matrix)))
@@ -13,7 +13,7 @@ def get_entries_in_proximity(
 
 
 def get_positive_entries_in_proximity(
-    matrix: list[list[int]], distance_threshhold: int
+    matrix: list[list[int | float]], distance_threshhold: int
 ) -> int:
     m = len(matrix)
     n = len(matrix[0])
