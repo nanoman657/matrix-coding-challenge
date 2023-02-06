@@ -1,1 +1,1 @@
-# mailgun-coding-challenge
+# CCRi-coding-challenge
